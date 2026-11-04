@@ -1,0 +1,57 @@
+﻿name: Bug report
+description: Something in the HOTSAnalyst Companion isn't working
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't include your upload token or any password.
+  - type: input
+    id: version
+    attributes:
+      label: Companion version
+      description: Shown in the tray menu under About.
+      placeholder: "0.5.21"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: What's affected?
+      options:
+        - Panel doesn't appear or can't be seen
+        - Hover tab (position, dragging, opening)
+        - Hotkey
+        - Players or heroes wrong or missing
+        - Votes or tags not saving
+        - Skill ratings
+        - Replay upload or sync
+        - Installer or updates
+        - Settings
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Queue for a game
+        2. ...
+  - type: input
+    id: display
+    attributes:
+      label: Game display mode and monitors
+      description: Windowed, borderless or fullscreen, and how many monitors.
+      placeholder: Borderless, 2 monitors
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
